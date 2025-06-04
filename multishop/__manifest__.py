@@ -1,0 +1,36 @@
+{
+    'name': 'Ecommerce CUJAE',
+    'summary': """Modulo destinado al comercio electronico Cujae""",
+    'images':['static/description/icon.png',],
+    'sequence': 0.5,
+    'version': '1.0.0',
+    'category': 'Website',
+    'author': 'Denilson Carmona',
+    'description': """Module for only changes and customs""",
+    'depends': [
+        'website_sale_delivery',
+        'website_sale_digital',
+        'website_sale_loyalty_delivery',
+        'payment_custom',
+        'product',
+        'base',
+        'purchase',
+        'project'
+    ],
+    'data': [
+        'views/category_groups.xml',
+        'views/groups.xml',
+        'views/menus.xml',
+        'views/create_deliveries_methods.xml',
+        'views/states_cp.xml',
+        'views/cp.xml',
+        'views/contact_form.xml',
+        'views/municipality.xml',
+        'security/ir.model.access.csv'
+    ],
+    'test': ['tests/test_charge_capacity.py'],
+    'application': True,
+    'installable': True,
+    'auto_install': False,
+    'license': 'LGPL-3',
+}

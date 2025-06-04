@@ -1,0 +1,65 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Municipios con códigos postales -->
+        <record id="municipality_habana_vieja" model="res.municipality">
+            <field name="name">Habana Vieja</field>
+            <field name="postal_code">10100</field>
+        </record>
+        <record id="municipality_centro_habana" model="res.municipality">
+            <field name="name">Centro Habana</field>
+            <field name="postal_code">10200</field>
+        </record>
+        <record id="municipality_plaza_revolucion" model="res.municipality">
+            <field name="name">Plaza de la Revolución</field>
+            <field name="postal_code">10400</field>
+        </record>
+        <record id="municipality_cerro" model="res.municipality">
+            <field name="name">Cerro</field>
+            <field name="postal_code">10600</field>
+        </record>
+        <record id="municipality_diez_de_octubre" model="res.municipality">
+            <field name="name">Diez de Octubre</field>
+            <field name="postal_code">10500</field>
+        </record>
+        <record id="municipality_boyeros" model="res.municipality">
+            <field name="name">Boyeros</field>
+            <field name="postal_code">10800</field>
+        </record>
+        <record id="municipality_arroyo_naranjo" model="res.municipality">
+            <field name="name">Arroyo Naranjo</field>
+            <field name="postal_code">10900</field>
+        </record>
+        <record id="municipality_san_miguel_padron" model="res.municipality">
+            <field name="name">San Miguel del Padrón</field>
+            <field name="postal_code">11000</field>
+        </record>
+        <record id="municipality_guanabacoa" model="res.municipality">
+            <field name="name">Guanabacoa</field>
+            <field name="postal_code">11100</field>
+        </record>
+        <record id="municipality_regla" model="res.municipality">
+            <field name="name">Regla</field>
+            <field name="postal_code">11200</field>
+        </record>
+        <record id="municipality_cotorro" model="res.municipality">
+            <field name="name">Cotorro</field>
+            <field name="postal_code">14000</field>
+        </record>
+        <record id="municipality_habana_del_este" model="res.municipality">
+            <field name="name">Habana del Este</field>
+            <field name="postal_code">12500</field>
+        </record>
+        <record id="municipality_la_lisa" model="res.municipality">
+            <field name="name">La Lisa</field>
+            <field name="postal_code">17100</field>
+        </record>
+        <record id="municipality_marianao" model="res.municipality">
+            <field name="name">Marianao</field>
+            <field name="postal_code">11500</field>
+        </record>
+        <record id="municipality_playa" model="res.municipality">
+            <field name="name">Playa</field>
+            <field name="postal_code">11300</field>
+        </record>
+    </data>
+</odoo>

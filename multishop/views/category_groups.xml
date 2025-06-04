@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+        <record id="custom_group" model="ir.module.category">
+            <field name="name">Grupo personalizado</field>
+            <field name="sequence" eval="10"/>
+        </record>
+    </data>
+</odoo>

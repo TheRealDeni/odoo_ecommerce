@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Personalizacion al contacto-->
+<odoo>
+    <data noupdate="1">
+
+        <!-- Ajustando el formulario para dealers -->
+        <record id="view_partner_form_inherit_multishop" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.multishop</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <field name="is_dealer_user" invisible="1"/>
+                </xpath>
+                <xpath expr="//sheet/group" position="inside">
+                    <group string="Datos del transportista" attrs="{'invisible': [('is_dealer_user', '=', False)]}">
+                        <field name="charge_capacity" string="Capacidad de Carga"/>
+                        <field name="municipality_ids" widget="many2many_tags" string="Zona de Cobertura"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

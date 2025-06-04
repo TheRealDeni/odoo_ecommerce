@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_template_suppliers,Acceso Proveedores a Prod Template,product.model_product_template,multishop.suppliers,1,0,1,0
+access_product_product_suppliers,Acceso Proveedores a Prod Product,product.model_product_product,multishop.suppliers,1,0,1,0
+access_stock_picking_dealers,Acceso Picking a Entregas para Dealers,stock.model_stock_picking,multishop.dealers,1,1,0,0
+access_stock_move_dealers,Acceso Movimiento de Existencias para Dealers,stock.model_stock_move,multishop.dealers,1,1,0,0
+access_stock_immediate_transfer_dealers,Acceso a Transferencias Inmediatas para Dealers,stock.model_stock_immediate_transfer,multishop.dealers,1,0,0,0
+access_stock_move_dealers,Acceso a Movimientos de Stock para Dealers,stock.model_stock_move,multishop.dealers,1,1,0,0
+access_res_municipality,res.municipality,multishop.model_res_municipality,base.group_user,1,1,1,1
+access_res_municipality_admin,res.municipality,multishop.model_res_municipality,base.group_system,1,1,1,1
+access_dealer_availability_admin,Acceso a Disponibilidad de dias para Admin,multishop.model_dealer_availability,base.group_system,1,0,0,0
+access_dealer_availability_dealers,Acceso a Disponibilidad de dias para Dealers,multishop.model_dealer_availability,multishop.dealers,1,1,1,1

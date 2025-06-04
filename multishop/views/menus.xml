@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data noupdate="1">
+
+        <!-- Crear el nuevo menú "Solicitudes trabajadores" visible solo para el grupo base.group_system -->
+        <menuitem id="ecommerce_requests_view_admins"
+                  parent="website.menu_content"
+                  sequence="10"
+                  groups="base.group_system"
+                  name="Solicitudes trabajadores"
+                  action="project.open_view_project_all"/>
+
+        <!-- Crear el nuevo menú "permisos de usuarios" visible solo para el grupo base.group_system -->
+        <menuitem id="ecommerce_access_users_view_admins"
+                  parent="website.menu_content"
+                  sequence="15"
+                  groups="base.group_system"
+                  name="Permisos de usuarios"
+                  action="base.action_res_users"/>
+
+        <!-- Crear el nuevo menú "datos usuarios" visible solo para el grupo base.group_system -->
+        <menuitem id="ecommerce_details_users_view_admins"
+                  parent="website.menu_content"
+                  sequence="20"
+                  groups="base.group_system"
+                  name="Datos de usuarios"
+                  action="contacts.action_contacts"/>
+
+        <!-- Crear el nuevo menú "Comercio Electrónico" visible solo para el grupo multishop.suppliers -->
+        <menuitem id="ecommerce_products_view_suppliers"
+                  parent="website.menu_content"
+                  sequence="25"
+                  groups="multishop.suppliers"
+                  name="Comercio Electrónico"
+                  action="website_sale.product_template_action_website"/>
+
+        <!-- Crear el nuevo menú "Entregas" visible solo para el grupo multishop.dealers -->
+        <menuitem id="ecommerce_shipping_view_dealers"
+                  parent="website.menu_content"
+                  sequence="30"
+                  groups="multishop.dealers"
+                  name="Entregas"
+                  action="stock.action_picking_tree_ready"/>
+
+        <!-- Crear el nuevo menú "Disponibilidad" visible solo para el grupo multishop.dealers -->
+        <menuitem id="ecommerce_availability_view_dealers"
+                  parent="website.menu_content"
+                  sequence="35"
+                  groups="multishop.dealers"
+                  name="Disponibilidad"
+                  action="multishop.action_view_dealer_availability_tree"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,155 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Producto: Envio por Municipio -->
+        <record id="product_service_envio_habana_vieja" model="product.template">
+            <field name="name">Envio Habana Vieja</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_HAB_VIEJA</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_centro_habana" model="product.template">
+            <field name="name">Envio Centro Habana</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_CENTRO_HABANA</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_plaza_revolucion" model="product.template">
+            <field name="name">Envio Plaza de la Revolución</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_PLZA_REVOLUCION</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_cerro" model="product.template">
+            <field name="name">Envio Cerro</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_CERRO</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_diez_de_octubre" model="product.template">
+            <field name="name">Envio Diez de Octubre</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_DIEZ_DE_OCTUBRE</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_boyeros" model="product.template">
+            <field name="name">Envio Boyeros</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_BOYEROS</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_arroyo_naranjo" model="product.template">
+            <field name="name">Envio Arroyo Naranjo</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_ARROYO_NARANJO</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_san_miguel_padron" model="product.template">
+            <field name="name">Envio San Miguel del Padrón</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_SAN_MIGUEL_PADRON</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+         </record>
+
+        <record id = "product_service_envio_guanabacoa" model = "product.template" >
+            <field name="name">Envio Guanabacoa</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_GUANABACOA</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+         </record>
+
+        <record id = "product_service_envio_regla" model = "product.template" >
+            <field name="name">Envio Regla</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_REGLA</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+         </record>
+
+        <record id="product_service_envio_cotorro" model="product.template">
+            <field name="name">Envio Cotorro</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_COTORRO</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_habana_del_este" model="product.template">
+            <field name="name">Envio Habana del Este</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_HABANA_DEL_ESTE</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_la_lisa" model="product.template">
+            <field name="name">Envio La Lisa</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_LA_LISA</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_marianao" model="product.template">
+            <field name="name">Envio Marianao</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_MARIANO</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+        <record id="product_service_envio_playa" model="product.template">
+            <field name="name">Envio Playa</field>
+            <field name="sale_ok">false</field>
+            <field name="purchase_ok">false</field>
+            <field name="default_code">ENV_PLAYA</field>
+            <field name="list_price">0.0</field>
+            <field name="taxes_id" eval="[(6, 0, [])]"/> <!-- Campo taxes_id vacío -->
+            <field name="detailed_type">service</field>
+        </record>
+
+    </data>
+</odoo>

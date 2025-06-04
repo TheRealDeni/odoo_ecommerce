@@ -1,0 +1,77 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="zip_prefix_10100" model="delivery.zip.prefix">
+            <field name="name">10100</field>
+        </record>
+
+        <record id="zip_prefix_10200" model="delivery.zip.prefix">
+            <field name="name">10200</field>
+        </record>
+
+        <record id="zip_prefix_10400" model="delivery.zip.prefix">
+            <field name="name">10400</field>
+        </record>
+
+        <record id="zip_prefix_10500" model="delivery.zip.prefix">
+            <field name="name">10500</field>
+        </record>
+
+        <record id="zip_prefix_10600" model="delivery.zip.prefix">
+            <field name="name">10600</field>
+        </record>
+
+        <record id="zip_prefix_10700" model="delivery.zip.prefix">
+            <field name="name">10700</field>
+        </record>
+
+        <record id="zip_prefix_10800" model="delivery.zip.prefix">
+            <field name="name">10800</field>
+        </record>
+
+        <record id="zip_prefix_10900" model="delivery.zip.prefix">
+            <field name="name">10900</field>
+        </record>
+
+        <record id="zip_prefix_11000" model="delivery.zip.prefix">
+            <field name="name">11000</field>
+        </record>
+
+        <record id="zip_prefix_11100" model="delivery.zip.prefix">
+            <field name="name">11100</field>
+        </record>
+
+        <record id="zip_prefix_11200" model="delivery.zip.prefix">
+            <field name="name">11200</field>
+        </record>
+
+        <record id="zip_prefix_11300" model="delivery.zip.prefix">
+            <field name="name">11300</field>
+        </record>
+
+        <record id="zip_prefix_11500" model="delivery.zip.prefix">
+            <field name="name">11500</field>
+        </record>
+
+        <record id="zip_prefix_12500" model="delivery.zip.prefix">
+            <field name="name">12500</field>
+        </record>
+
+        <record id="zip_prefix_12600" model="delivery.zip.prefix">
+            <field name="name">12600</field>
+        </record>
+
+        <record id="zip_prefix_12700" model="delivery.zip.prefix">
+            <field name="name">12700</field>
+        </record>
+
+        <record id="zip_prefix_14000" model="delivery.zip.prefix">
+            <field name="name">14000</field>
+        </record>
+
+        <record id="zip_prefix_17100" model="delivery.zip.prefix">
+            <field name="name">17100</field>
+        </record>
+
+    </data>
+</odoo>
