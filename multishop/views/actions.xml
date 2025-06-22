@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Grupos y reglas-->
+<odoo>
+    <data noupdate="0">
+
+       <!--Accion que abre la vista-->
+        <record id="action_view_dealer_availability_tree" model="ir.actions.act_window">
+            <field name="name">Disponibilidad</field>
+            <field name="res_model">dealer.availability</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_dealer_availability_tree"/>
+            <field name="domain">[('user_id', '=', uid)]</field> <!-- solo sus propios registros -->
+        </record>
+
+    </data>
+</odoo>

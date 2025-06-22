@@ -7,3 +7,4 @@ class Municipality(models.Model):
 
     name = fields.Char(string='Municipio', required=True)
     postal_code = fields.Char(string='CP', required=True)
+

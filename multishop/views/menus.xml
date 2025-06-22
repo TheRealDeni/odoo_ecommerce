@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
 
         <!-- Crear el nuevo menú "Solicitudes trabajadores" visible solo para el grupo base.group_system -->
         <menuitem id="ecommerce_requests_view_admins"
@@ -11,7 +11,7 @@
                   name="Solicitudes trabajadores"
                   action="project.open_view_project_all"/>
 
-        <!-- Crear el nuevo menú "permisos de usuarios" visible solo para el grupo base.group_system -->
+        <!-- Crear el nuevo menú "Permisos de Usuarios" visible solo para el grupo base.group_system -->
         <menuitem id="ecommerce_access_users_view_admins"
                   parent="website.menu_content"
                   sequence="15"
@@ -19,7 +19,7 @@
                   name="Permisos de usuarios"
                   action="base.action_res_users"/>
 
-        <!-- Crear el nuevo menú "datos usuarios" visible solo para el grupo base.group_system -->
+        <!-- Crear el nuevo menú "Datos Usuarios" visible solo para el grupo base.group_system -->
         <menuitem id="ecommerce_details_users_view_admins"
                   parent="website.menu_content"
                   sequence="20"
@@ -32,8 +32,23 @@
                   parent="website.menu_content"
                   sequence="25"
                   groups="multishop.suppliers"
-                  name="Comercio Electrónico"
+                  name="Productos"
                   action="website_sale.product_template_action_website"/>
+
+        <!-- Crear el nuevo menú "Cursos" visible para los grupos base.group_system y multishop.suppliers -->
+        <menuitem id="ecommerce_courses_view_admin"
+            parent="website_sale.menu_catalog"
+            sequence="2"
+            groups="base.group_system"
+            name="Cursos"
+            action="website_slides.slide_channel_action_overview"/>
+
+        <menuitem id="ecommerce_courses_view_suppliers"
+            parent="website.menu_content"
+            sequence="30"
+            groups="multishop.suppliers"
+            name="Cursos"
+            action="website_slides.slide_channel_action_overview"/>
 
         <!-- Crear el nuevo menú "Entregas" visible solo para el grupo multishop.dealers -->
         <menuitem id="ecommerce_shipping_view_dealers"

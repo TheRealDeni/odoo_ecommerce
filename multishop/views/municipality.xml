@@ -1,5 +1,5 @@
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
         <!-- Municipios con códigos postales -->
         <record id="municipality_habana_vieja" model="res.municipality">
             <field name="name">Habana Vieja</field>

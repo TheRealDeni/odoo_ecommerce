@@ -1,6 +1,6 @@
 <odoo>
-    <data noupdate="1">
-
+    <data noupdate="0">
+        <!--TODOS LOS CODIGOS POSTALES DE LA HABANA-->
         <record id="zip_prefix_10100" model="delivery.zip.prefix">
             <field name="name">10100</field>
         </record>

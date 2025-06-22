@@ -13,19 +13,22 @@
         'website_sale_loyalty_delivery',
         'payment_custom',
         'product',
-        'base',
         'purchase',
-        'project'
+        'project',
+        'website_slides',
+        'website_sale_slides'
     ],
     'data': [
         'views/category_groups.xml',
-        'views/groups.xml',
-        'views/menus.xml',
         'views/create_deliveries_methods.xml',
         'views/states_cp.xml',
         'views/cp.xml',
-        'views/contact_form.xml',
         'views/municipality.xml',
+        'views/access_rules.xml',
+        'views/new_views.xml',
+        'views/actions.xml',
+        'views/menus.xml',
+        'views/inherited_views.xml',
         'security/ir.model.access.csv'
     ],
     'test': ['tests/test_charge_capacity.py'],

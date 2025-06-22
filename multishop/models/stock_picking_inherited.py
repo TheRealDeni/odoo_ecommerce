@@ -6,6 +6,7 @@ class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
     is_dealer_user = fields.Boolean(default=False, store=False, compute='_compute_is_dealer_user')
+    dealer_ids = fields.Many2many('res.users', compute='_compute_dealer_ids', store=False)
 
     @api.depends()
     def _compute_is_dealer_user(self):
@@ -41,7 +42,7 @@ class StockPicking(models.Model):
 
     @api.constrains('user_id', 'scheduled_date')
     def _check_dealer_availability_range(self):
-        """Valida que la fecha programada esté dentro de un intervalo de disponibilidad del transportista."""
+        """Valida que la fecha programada esté dentro de un intervalo de disponibilidad del transportista. Haciendo que solo se muestren los transportistas como posibles responsables de entregas"""
         for picking in self:
             if picking.user_id and picking.scheduled_date:
                 availabilities = self.env['dealer.availability'].search([
@@ -55,3 +56,11 @@ class StockPicking(models.Model):
                     raise ValidationError(_(
                         "La fecha programada del envío (%s) no coincide con ninguna disponibilidad del transportista seleccionado."
                     ) % picking.scheduled_date.strftime('%Y-%m-%d %H:%M:%S'))
+
+    # Almacenar todos los ids de los transportistas para solo mostrarlos a la hora de eleccion
+    def _compute_dealer_ids(self):
+        dealer_group = self.env.ref('multishop.dealers')
+        dealer_users = self.env['res.users'].search([('groups_id', 'in', dealer_group.id)])
+        for record in self:
+            record.dealer_ids = dealer_users
+

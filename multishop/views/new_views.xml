@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Grupos y reglas-->
+<odoo>
+    <data noupdate="0">
+
+        <!--Creando formulario de disponibilidad de los transportistas-->
+        <record id="view_dealer_availability_form" model="ir.ui.view">
+            <field name="name">dealer.availability.form</field>
+            <field name="model">dealer.availability</field>
+            <field name="arch" type="xml">
+                <form string="Nueva Disponibilidad">
+                    <attribute name="groups">multishop.dealers</attribute>
+                    <sheet>
+                        <group>
+                            <field name="user_id" readonly="1"/>
+                            <field name="date_start"/>
+                            <field name="date_stop"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Creando vista lista para disponibilidad de transportista-->
+        <record id="view_dealer_availability_tree" model="ir.ui.view">
+            <field name="name">dealer.availability.tree</field>
+            <field name="model">dealer.availability</field>
+            <field name="arch" type="xml">
+                <tree string="Disponibilidades">
+                    <attribute name="groups">multishop.dealers</attribute>
+                    <field name="date_start"/>
+                    <field name="date_stop"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

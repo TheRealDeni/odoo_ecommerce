@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Grupos y reglas-->
+<odoo>
+    <data noupdate="0">
+
+        <!-- Ajustando el formulario de contacto de transportistas -->
+        <record id="view_partner_form_inherit_multishop" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.multishop</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <field name="is_dealer_user" invisible="1"/>
+                </xpath>
+                <xpath expr="//sheet/group" position="inside">
+                    <group string="Datos del transportista" attrs="{'invisible': [('is_dealer_user', '=', False)]}">
+                        <field name="charge_capacity" string="Capacidad de Carga"/>
+                        <field name="municipality_ids" widget="many2many_tags" string="Zona de Cobertura"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Ajustando el formulario de una entrega para los transportistas-->
+        <record id="view_picking_form_inherit_multishop_dealer" model="ir.ui.view">
+            <field name="name">stock.picking.form.inherit.multishop</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <!-- Modificamos el botón Validate para incluir el grupo multishop.dealers -->
+                <xpath expr="//button[@name='button_validate']" position="attributes">
+                    <attribute name="groups">stock.group_stock_user,multishop.dealers</attribute>
+                </xpath>
+                <!-- Hacemos que los otros botones no sean visibles para el grupo multishop.dealers -->
+                <xpath expr="//button[@name='do_unreserve']" position="attributes">
+                    <attribute name="groups">stock.group_stock_user,multishop.dealers</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_assign']" position="attributes">
+                    <attribute name="groups">stock.group_stock_user</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_open_label_type']" position="attributes">
+                    <attribute name="groups">stock.group_stock_user</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="groups">stock.group_stock_user</attribute>
+                </xpath>
+                <!-- Hacer de solo lectura los campos necesarios para el grupo multishop.dealers -->
+                <!-- Agrego el campo is_dealer_user como invisible -->
+                <xpath expr="//form" position="inside">
+                    <field name="is_dealer_user" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_dealer_user', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='scheduled_date']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_dealer_user', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='origin']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_dealer_user', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='move_ids_without_package']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_dealer_user', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='carrier_tracking_ref']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_dealer_user', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='move_type']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_dealer_user', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_dealer_user', '=', True)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Quitando botones de la vista tree para dealers-->
+        <record id="stock_picking_tree_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.tree.inherit.multishop</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.vpicktree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='do_unreserve']" position="attributes">
+                    <attribute name="groups">stock.group_stock_user</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_assign']" position="attributes">
+                    <attribute name="groups">stock.group_stock_user</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Haciendo que solo se muestren los transportistas como posibles responsables de entregas-->
+        <record id="stock_picking_form_dealer_domain" model="ir.ui.view">
+            <field name="name">stock.picking.form.user_id.dealer.domain</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <field name="dealer_ids" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="domain">[('id', 'in', dealer_ids)]</attribute>
+                </xpath>
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

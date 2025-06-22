@@ -1,6 +1,6 @@
 <odoo>
-    <data noupdate="1">
-        <!-- Producto: Envio por Municipio -->
+    <data noupdate="0">
+        <!--TODOS LOS ENVIOS POR MUNICIPIOS-->
         <record id="product_service_envio_habana_vieja" model="product.template">
             <field name="name">Envio Habana Vieja</field>
             <field name="sale_ok">false</field>
